@@ -1,38 +1,121 @@
-.App {
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  color: #333;
+}
+
+.heading {
   text-align: center;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #222;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-course-btn {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  background: #5e72e4;
+  margin-left:1000px;
+  margin-top: -70px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.add-course-btn:hover {
+  background: #324cdd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.course-form {
+  background: #f5f7fa;
+  padding: 1.8rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+}
+.course-form input, .course-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.course-form button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background: #4c76e0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.course-form button:hover {
+  background: #3a5ac7;
 }
 
-.App-link {
-  color: #61dafb;
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.course-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.1);
+}
+
+.course-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #2f3640;
+}
+
+.course-card p {
+  color: #565656;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.course-card button {
+  margin-top: auto;
+  padding: 0.8rem;
+  background: #11cdef;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.course-card button:hover {
+  background: #0fa3c3;
+}
+.course-card button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
 }
